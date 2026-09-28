@@ -1,0 +1,44 @@
+{
+  "sample_notice": "FICTIONAL SAMPLE EVIDENCE FOR MARKETPLACE CONNECTIVITY TESTING ONLY",
+  "vendor_id": "SAMPLE-VENDOR-001",
+  "vendor_name": "サンプル架空テクノロジー株式会社",
+  "vendor_type": "sample_cloud_service_provider",
+  "documents": [
+    {
+      "text": "サンプル記録。情報セキュリティ責任者を任命し、方針レビューを2026年4月に実施した。権限棚卸しは四半期ごとに行い、不要権限2件を停止した。",
+      "control_ids": ["SAMPLE-CTL-001", "SAMPLE-CTL-002"],
+      "document_version": "SAMPLE-DOC-2026.1-A",
+      "content_hash": "c86b07246cd2d39717a435d2447a1f3e5f3d44e4f05065201268c618893ee170"
+    },
+    {
+      "text": "サンプル記録。事象通知手順の机上訓練を2026年5月に完了した。重大脆弱性は7日以内に修正し、例外は責任者承認と期限を記録する。",
+      "control_ids": ["SAMPLE-CTL-003", "SAMPLE-CTL-008"],
+      "document_version": "SAMPLE-DOC-2026.1-B",
+      "content_hash": "596097764ca6e901791b6daf0432d99e0cd160e51624c01346f28801abe1f42c"
+    },
+    {
+      "text": "サンプル記録。再委託先1社を承認台帳で管理し、契約義務と年次レビュー結果を記録した。未承認の再委託は確認されていない。",
+      "control_ids": ["SAMPLE-CTL-004"],
+      "document_version": "SAMPLE-DOC-2026.1-C",
+      "content_hash": "a34664161c59730220eba483e4b855036aa293a0740f0f5cd6abe5662d780237"
+    },
+    {
+      "text": "サンプル記録。対象サービスの復旧演習を2026年3月に実施し、目標60分に対して35分で復旧した。サービス水準逸脱1件には是正期限を設定した。",
+      "control_ids": ["SAMPLE-CTL-005", "SAMPLE-CTL-010"],
+      "document_version": "SAMPLE-DOC-2026.1-D",
+      "content_hash": "25a6be45aa67462d10581f229c719c1f2981cd940eeb7d0584d60cf1687e27ae"
+    },
+    {
+      "text": "サンプル記録。データ保存地域は架空リージョンAとBで、変更は委託元承認を要する。終了時は返却、消去、アクセス停止の完了証明を発行する。",
+      "control_ids": ["SAMPLE-CTL-006", "SAMPLE-CTL-009"],
+      "document_version": "SAMPLE-DOC-2026.1-E",
+      "content_hash": "9afe1ba3d8e62c32850467e60f4762438eaa5ce463e9f01b2fc2f33234a57019"
+    },
+    {
+      "text": "サンプル記録。独立評価者による監査を2026年2月に受け入れ、指摘3件の責任者と期限を登録し、全件の完了を確認した。",
+      "control_ids": ["SAMPLE-CTL-007"],
+      "document_version": "SAMPLE-DOC-2026.1-F",
+      "content_hash": "d6742b04603c7a4bf342f90722fc3882fb6247b87a0c6519afaed237986aa84d"
+    }
+  ]
+}

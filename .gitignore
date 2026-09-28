@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+.env
+*.egg
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+htmlcov/
+.coverage
+
+# Reference files kept locally for development only — never commit these.
+CLAUDE.md
+security_rules/
+ci_stubs/
+MANIFEST.md
+STG_RUNBOOK.md

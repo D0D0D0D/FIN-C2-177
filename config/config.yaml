@@ -1,0 +1,34 @@
+# Runtime configuration — FIN-C2-177
+# Runtime-tunable parameters only. Static manifest fields (name / version / category /
+# requires.*) live in config/agent.yaml.
+
+# --- backbone ---
+max_retry: 3
+timeout_s: 60          # 多様式の統制証跡を照合するため LLM 往復が長い
+
+# --- HITL (docs/02_design.md §HITL 設計) ---
+# hitl.enabled / memory_enabled は checkpointer を自動生成しない。入口 adapter が outer / inner
+# に別インスタンスの saver を明示して compile する。
+memory_enabled: true
+hitl:
+  enabled: true
+  max_hitl: 8          # 統制要求ごとの差戻しを想定した壁打ち回数の上限
+
+# --- domain: evidence verification ---
+# Stage 4 EvidenceVerifyNode が HITL を発火する claim→source 対応の信頼度閾値
+evidence_confidence_threshold: 0.8
+
+# --- domain: retrieval ---
+kb_top_k: 8            # 長文の統制証跡・過去照合観点を拾うため多め
+
+# --- domain: LLM ---
+# 実 LLM クライアントは config["llm"] で注入する（モデル ID や具体クライアントを src/ に書かない）。
+# 未注入時は Stage 3 が deterministic fallback に落ち、degradation_reason を立てる。
+llm_temperature: 0.0   # 金融規制文脈・事実照合のため決定論寄り
+
+# --- domain: transient payload store ---
+# 統制証跡の生本文は State に載せず transient store に預け、State は英字のみの
+# evidence_payload_ref だけを持つ（uuid4 ref は S-2 PII ゲートに [MASKED] 破壊される）。
+payload_ttl_s: 900
+max_evidence_documents: 20
+max_aggregate_evidence_chars: 400000

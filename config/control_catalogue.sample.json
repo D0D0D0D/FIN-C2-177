@@ -1,0 +1,64 @@
+{
+  "sample_notice": "FICTIONAL SAMPLE DATA FOR MARKETPLACE CONNECTIVITY TESTING ONLY",
+  "ref": "SAMPLE-CATALOGUE",
+  "version": "SAMPLE-2026.1",
+  "catalogue_version": "SAMPLE-2026.1",
+  "content_hash": "1a85097c34afd67457f881f58f72e19c0e7b31b6a88506e023956b00299eaa05",
+  "approved": true,
+  "effective_from": "2020-01-01",
+  "effective_to": "2099-12-31",
+  "content": {
+    "controls": [
+      {
+        "control_id": "SAMPLE-CTL-001",
+        "requirement_text": "委託先が情報セキュリティの責任者、方針、定期レビュー手続を文書化していること。",
+        "requirement_text_hash": "18048024ac9aa0dc14aa06f89465edf0f21737d0f92cd030ac3500740a2fd1c4"
+      },
+      {
+        "control_id": "SAMPLE-CTL-002",
+        "requirement_text": "委託業務で扱うデータへのアクセスを職務上必要な範囲に限定し、定期的に棚卸ししていること。",
+        "requirement_text_hash": "f065bb17d1bcb3a7bc42f791b4491737a6af4b474f20ef300a8fd44f04f24679"
+      },
+      {
+        "control_id": "SAMPLE-CTL-003",
+        "requirement_text": "セキュリティ事象の検知、初動、委託元への通知および事後改善の手順が定められていること。",
+        "requirement_text_hash": "ec6904202f3394a704bb390ace6f7e511cab98460b63c76140b59a3df7a830ec"
+      },
+      {
+        "control_id": "SAMPLE-CTL-004",
+        "requirement_text": "再委託先の選定、承認、契約上の義務付けおよび継続監視を行う仕組みがあること。",
+        "requirement_text_hash": "34ae1b2ad3121eec898b6d1ac613c0a924f278c2efa12326614b1ae3c8b18fc6"
+      },
+      {
+        "control_id": "SAMPLE-CTL-005",
+        "requirement_text": "事業継続計画と復旧手順を整備し、対象サービスを含む演習結果を記録していること。",
+        "requirement_text_hash": "1af032cc7f23ce7c67b6fe1d467eb846f94ce14261a2d8cbaa6c22e3d653bfd5"
+      },
+      {
+        "control_id": "SAMPLE-CTL-006",
+        "requirement_text": "委託元データの保存国・地域、移転経路および変更管理を把握し説明できること。",
+        "requirement_text_hash": "9b95a75e800756570f858b2256701438879b82faed16a592678fd6d813576ab7"
+      },
+      {
+        "control_id": "SAMPLE-CTL-007",
+        "requirement_text": "委託元または独立した評価者による監査を受け入れ、指摘事項を追跡する手続があること。",
+        "requirement_text_hash": "fabb457a894dd0b97490565a221dc27c6bd18d9e005de754b590aebd090486cf"
+      },
+      {
+        "control_id": "SAMPLE-CTL-008",
+        "requirement_text": "脆弱性情報の収集、優先度付け、修正および例外承認を期限管理していること。",
+        "requirement_text_hash": "5cfb77c756350a09d1d1d15676e916e48dbee11d45f67e370d09d485fbaf679a"
+      },
+      {
+        "control_id": "SAMPLE-CTL-009",
+        "requirement_text": "委託終了時のデータ返却、消去、アクセス停止および完了確認の手順があること。",
+        "requirement_text_hash": "db082e08008430d600a6f264ab3a517b2e5eff0dede0503859e77015e8a97aef"
+      },
+      {
+        "control_id": "SAMPLE-CTL-010",
+        "requirement_text": "サービス水準と統制運用状況を測定し、逸脱時の是正と委託元への報告を行うこと。",
+        "requirement_text_hash": "256390b17e5d24014d27db05194b7b0690f4d759e8d80b0444e0cdc1e34c4256"
+      }
+    ]
+  }
+}

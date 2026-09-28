@@ -1,0 +1,37 @@
+# Agent Manifest — AgentRegistry entry point
+# AgentRegistry reads every key below at ROOT level; do not nest under agent:.
+id: "FIN-C2-177"
+name: "FinancialOutsourcingDueDiligenceEvidenceBriefAgent"
+namespace: "fin"
+version: "1.0.0"
+enabled: true
+category: "Cat 2"
+# Static generation contract (deterministic | llm; deterministic when omitted).
+# Stage 3a `CurrentAssessmentNode` が config["llm"] を使って evidence_brief を生成するため llm。
+# 実 LLM 1回転で縮退なしを実測済み（docs/03_test_spec.md に記録）。
+generation_mode: "llm"  # deterministic | llm
+industry: "FIN"
+
+# L1 base graph type (L1 direct inheritance; DocGenerationAgent pattern).
+# Opaque compatibility metadata. Runtime tuning lives in config/config.yaml.
+base_type: "AgentBaseGraph"
+
+# Entry point — single dotted import path (module.Class).
+class: "src.graph.graph.OutsourcingDueDiligenceBriefAgent"
+
+# Security
+required_trust_level: "VERIFIED_EXTERNAL"
+
+# Declared dependencies (AgentRegistry reads this at deployment time).
+# Secrets are retrieved at runtime via ctx.secrets.require("KEY") — never os.environ,
+# and never stored in State (checkpoint DB would hold them in plaintext).
+requires:
+  extras: []
+  secrets:
+    - "LLM_API_KEY"        # Stage 3a / 3b の注入済み LLM 用
+    - "DD_DB_DSN"          # outsourcing_cases / case_evidence / feedback audit
+    - "DD_KB_DSN"          # 案件証跡・同一ベンダー過去評価の safe projection
+
+# NOTE: runtime-tunable parameters (max_retry / timeout_s / memory_enabled / hitl.*)
+# live in config/config.yaml — putting them here misuses the manifest contract
+# and breaks manifest tooling.

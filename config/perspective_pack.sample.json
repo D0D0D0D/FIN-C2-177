@@ -1,0 +1,98 @@
+{
+  "sample_notice": "FICTIONAL SAMPLE DATA FOR MARKETPLACE CONNECTIVITY TESTING ONLY",
+  "ref": "SAMPLE-PERSPECTIVE-PACK",
+  "version": "SAMPLE-2026.1",
+  "perspective_pack_version": "SAMPLE-2026.1",
+  "content_hash": "2f3ce3cfef1cb666d064f0c18b68a44b857c0fd7b12170598638795d74bc5b15",
+  "approved": true,
+  "effective_from": "2020-01-01",
+  "effective_to": "2099-12-31",
+  "content": {
+    "rules": [
+      {
+        "rule_id": "SAMPLE-RULE-001",
+        "applies_to": {
+          "catalogue_id": "SAMPLE-CATALOGUE",
+          "catalogue_version": "SAMPLE-2026.1",
+          "control_ids": ["SAMPLE-CTL-001", "SAMPLE-CTL-002"]
+        },
+        "applicability": {"vendor_types": [], "service_scope_fingerprints": []},
+        "expected_evidence": [{"type": "security governance and access review records", "required": true}],
+        "minimum_sufficiency": "責任者とレビュー日、対象範囲、是正状況が確認できること。",
+        "contradiction_signals": ["責任者が未設定", "アクセス棚卸しが未実施"],
+        "verification_questions": ["直近のアクセス権棚卸しはいつ、どの範囲で実施されましたか。"],
+        "approval": {"status": "approved", "owner": "SAMPLE-CONTROL-OWNER"}
+      },
+      {
+        "rule_id": "SAMPLE-RULE-002",
+        "applies_to": {
+          "catalogue_id": "SAMPLE-CATALOGUE",
+          "catalogue_version": "SAMPLE-2026.1",
+          "control_ids": ["SAMPLE-CTL-003", "SAMPLE-CTL-008"]
+        },
+        "applicability": {"vendor_types": [], "service_scope_fingerprints": []},
+        "expected_evidence": [{"type": "incident and vulnerability handling records", "required": true}],
+        "minimum_sufficiency": "通知経路、対応期限、実施結果および未解決事項が確認できること。",
+        "contradiction_signals": ["通知経路が未定義", "重大脆弱性が期限超過"],
+        "verification_questions": ["重大事象の通知訓練と脆弱性是正の期限管理を示してください。"],
+        "approval": {"status": "approved", "owner": "SAMPLE-CONTROL-OWNER"}
+      },
+      {
+        "rule_id": "SAMPLE-RULE-003",
+        "applies_to": {
+          "catalogue_id": "SAMPLE-CATALOGUE",
+          "catalogue_version": "SAMPLE-2026.1",
+          "control_ids": ["SAMPLE-CTL-004"]
+        },
+        "applicability": {"vendor_types": [], "service_scope_fingerprints": []},
+        "expected_evidence": [{"type": "subcontractor register and review record", "required": true}],
+        "minimum_sufficiency": "再委託先、対象業務、承認日、契約義務および監視結果が確認できること。",
+        "contradiction_signals": ["未承認の再委託", "契約上の統制義務が未設定"],
+        "verification_questions": ["現在の再委託先一覧と直近の監視結果を提示してください。"],
+        "approval": {"status": "approved", "owner": "SAMPLE-CONTROL-OWNER"}
+      },
+      {
+        "rule_id": "SAMPLE-RULE-004",
+        "applies_to": {
+          "catalogue_id": "SAMPLE-CATALOGUE",
+          "catalogue_version": "SAMPLE-2026.1",
+          "control_ids": ["SAMPLE-CTL-005", "SAMPLE-CTL-010"]
+        },
+        "applicability": {"vendor_types": [], "service_scope_fingerprints": []},
+        "expected_evidence": [{"type": "continuity exercise and service review records", "required": true}],
+        "minimum_sufficiency": "対象サービス、目標、実績、例外および是正期限が確認できること。",
+        "contradiction_signals": ["演習が未実施", "逸脱に是正計画がない"],
+        "verification_questions": ["直近演習の復旧実績とサービス水準逸脱の是正状況を示してください。"],
+        "approval": {"status": "approved", "owner": "SAMPLE-CONTROL-OWNER"}
+      },
+      {
+        "rule_id": "SAMPLE-RULE-005",
+        "applies_to": {
+          "catalogue_id": "SAMPLE-CATALOGUE",
+          "catalogue_version": "SAMPLE-2026.1",
+          "control_ids": ["SAMPLE-CTL-006", "SAMPLE-CTL-009"]
+        },
+        "applicability": {"vendor_types": [], "service_scope_fingerprints": []},
+        "expected_evidence": [{"type": "data location and exit procedure records", "required": true}],
+        "minimum_sufficiency": "保存地域、移転管理、返却・消去・アクセス停止の責任と確認方法が明確であること。",
+        "contradiction_signals": ["保存地域が不明", "終了時消去の確認手段がない"],
+        "verification_questions": ["データ所在地の変更履歴と終了時消去の確認方法を示してください。"],
+        "approval": {"status": "approved", "owner": "SAMPLE-CONTROL-OWNER"}
+      },
+      {
+        "rule_id": "SAMPLE-RULE-006",
+        "applies_to": {
+          "catalogue_id": "SAMPLE-CATALOGUE",
+          "catalogue_version": "SAMPLE-2026.1",
+          "control_ids": ["SAMPLE-CTL-007"]
+        },
+        "applicability": {"vendor_types": [], "service_scope_fingerprints": []},
+        "expected_evidence": [{"type": "audit acceptance and remediation tracking record", "required": true}],
+        "minimum_sufficiency": "監査範囲、実施主体、指摘、責任者、期限および完了確認が追跡できること。",
+        "contradiction_signals": ["監査受入を拒否", "重大指摘が未追跡"],
+        "verification_questions": ["直近監査の指摘事項と是正完了の証跡を提示してください。"],
+        "approval": {"status": "approved", "owner": "SAMPLE-CONTROL-OWNER"}
+      }
+    ]
+  }
+}
